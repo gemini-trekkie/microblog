@@ -1,0 +1,5 @@
+# Env
+.flaskenv
+
+# Python
+__pycache__/

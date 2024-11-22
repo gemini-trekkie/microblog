@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "microblog"
+version = "0.1.0"
+description = "2024 edition of the Flask Mega-Tutorial"
+authors = ["gemini-trekkie <189177915+gemini-trekkie@users.noreply.github.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "^3.1.0"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
