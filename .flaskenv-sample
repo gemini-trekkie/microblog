@@ -1,1 +1,2 @@
+# Before running it, though, Flask needs to be told how to import it, by setting the FLASK_APP environment variable:
 # FLASK_APP=microblog.py
