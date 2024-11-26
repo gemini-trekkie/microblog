@@ -17,6 +17,12 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 
+# Flask-Login provides a very useful feature that forces users to log in before they can view certain pages of the application.
+# If a user who is not logged in tries to view a protected page,
+# Flask-Login will automatically redirect the user to the login form, and only redirect back to the page the user wanted to view after the login process is complete. 
+# For this feature to be implemented, Flask-Login needs to know what is the view function that handles logins. This can be added in app/__init__.py:
+login.login_view = 'login'
+
 # The bottom import is a well known workaround that avoids circular imports,
 # a common problem with Flask applications.
 # You are going to see that the routes module needs to import the app variable
