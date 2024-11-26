@@ -2,6 +2,7 @@ from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_login import LoginManager
 
 # The __name__ variable passed to the Flask class is a Python predefined variable,
 # which is set to the name of the module in which it is used.
@@ -14,6 +15,7 @@ app.config.from_object(Config)
 # The database migration engine will also have an instance. 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+login = LoginManager(app)
 
 # The bottom import is a well known workaround that avoids circular imports,
 # a common problem with Flask applications.
